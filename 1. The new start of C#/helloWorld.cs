@@ -1,5 +1,4 @@
 using System;
-using static System.Console;
 
 namespace CSharpStudy {
     class HelloWorld {
