@@ -12,4 +12,4 @@
 - `.png` : Execution result capture image of `helloWorld.exe`, same as below
 
 ## 4. Result
-![Execution result capture image](https://github.com/pinkrabbit412/CSharpStudy/blob/main/1.%20The%20new%20start%20of%20C%23/helloWorld.png?raw=true)
+![Execution result capture image](https://github.com/pinkrabbit412/CSharpStudy/blob/main/01.%20The%20new%20start%20of%20C%23/helloWorld.png?raw=true)
