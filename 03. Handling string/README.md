@@ -15,5 +15,5 @@
 - `.png` : Execution result capture image of `handlingString.exe`, same as below
 
 ## 4. Result
-![Execution result capture image](![image](https://user-images.githubusercontent.com/44557974/153905164-1a09dcc7-a60b-4909-987c-86092f2a8077.png)
+![Execution result capture image](https://user-images.githubusercontent.com/44557974/153905164-1a09dcc7-a60b-4909-987c-86092f2a8077.png)
 
