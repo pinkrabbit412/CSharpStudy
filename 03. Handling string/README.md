@@ -2,11 +2,11 @@
 - Difficulty : `2/5 (Easy)`
 
 ## 2. Chapter key point
-- `Learn` : Searching (include `string.Replace()`)
-- `Learn` : Modifying
-- `Learn` : Spliting
+- `Learn` : Searching method (Including `string.Replace()`)
+- `Learn` : Modifying method 
+- `Learn` : Spliting method 
 - `Learn` : `String.Format()`
-- `Learn` : Interpolation
+- `Learn` : Interpolation method 
 - `Make` : Program that handles(Search, Modify, Split, Formatting, Interpolate) string data
 
 ## 3. Contains
