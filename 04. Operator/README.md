@@ -13,4 +13,4 @@
 - `.png` : Execution result capture image of `operators.exe`, same as below
 
 ## 4. Result
-![Execution result capture image]()
+![Execution result capture image](https://github.com/pinkrabbit412/CSharpStudy/blob/main/04.%20Operator/operators.png?raw=true)
