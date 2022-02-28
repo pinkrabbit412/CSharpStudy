@@ -1,5 +1,5 @@
 ## 1. Chapter overview
-- Difficulty : `3/5 (Normal)`
+- Difficulty : `2/5 (Easy)`
 
 ## 2. Chapter key point
 - `Learn` : C# Method
