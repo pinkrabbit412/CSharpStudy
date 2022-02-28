@@ -18,8 +18,9 @@
 - `.png` : Execution result capture image of `classes.exe` and `classAndStructure.exe`, same as below
 
 ## 4. Result
-![Execution result capture image of classes.exe]()
-<p align="center">Execution result capture image of classes.exe</p>
+![Execution result capture image of classes.exe](https://github.com/pinkrabbit412/CSharpStudy/blob/main/07.%20Class/classes.png?raw=true)
+<p align="center">▲ Execution result capture image of classes.exe</p>
 
-![Execution result capture image of classAndStructure.exe]()
-<p align="center">Execution result capture image of classAndStructure.exe</p>
+
+![Execution result capture image of classAndStructure.exe](https://github.com/pinkrabbit412/CSharpStudy/blob/main/07.%20Class/classAndStructure.png?raw=true)
+<p align="center">▲ Execution result capture image of classAndStructure.exe</p>
