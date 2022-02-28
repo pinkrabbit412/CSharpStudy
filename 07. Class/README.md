@@ -13,9 +13,13 @@
 - `Make` : Program that creates class objects, and copying class objects 
 
 ## 3. Contains
-- `.cs` : classes.cs
-- `.exe` : Compiled classes.cs (Executable file)
-- `.png` : Execution result capture image of `classes.exe`, same as below
+- `.cs` : classes.cs, classAndStructure.cs
+- `.exe` : Compiled classes.cs, Compiled classAndStructure.cs (Executable file)
+- `.png` : Execution result capture image of `classes.exe` and `classAndStructure.exe`, same as below
 
 ## 4. Result
-![Execution result capture image]()
+![Execution result capture image of classes.exe]()
+<p align="center">Execution result capture image of classes.exe</p>
+
+![Execution result capture image of classAndStructure.exe]()
+<p align="center">Execution result capture image of classAndStructure.exe</p>
