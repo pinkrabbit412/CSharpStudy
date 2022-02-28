@@ -6,7 +6,7 @@
 - `Learn` : Method with `return`
 - `Learn` : Parameter
 - `Learn` : How to pass parameter to Method
-- `Learn` : Method override
+- `Learn` : Method overloading
 - `Learn` : `params`, Named arguments, Optional arguments
 - `Make` : Program that uses 2 or more methods
 
