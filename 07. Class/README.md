@@ -29,6 +29,8 @@
 ## 4. Result
 ![Execution result capture image of classes.exe](https://github.com/pinkrabbit412/CSharpStudy/blob/main/07.%20Class/classes.png?raw=true)
 <p align="center">[Image #1] Execution result capture image of classes.exe</p>
+
 <br />
+
 ![Execution result capture image of classAndStructure.exe](https://github.com/pinkrabbit412/CSharpStudy/blob/main/07.%20Class/classAndStructure.png?raw=true)
 <p align="center">[Image #2] Execution result capture image of classAndStructure.exe</p>
