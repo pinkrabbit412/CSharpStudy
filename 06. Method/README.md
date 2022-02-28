@@ -16,4 +16,4 @@
 - `.png` : Execution result capture image of `methods.exe`, same as below
 
 ## 4. Result
-![Execution result capture image]()
+![Execution result capture image](https://github.com/pinkrabbit412/CSharpStudy/blob/main/06.%20Method/methods.png?raw=true)
