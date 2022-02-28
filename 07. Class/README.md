@@ -15,7 +15,6 @@
 - `Learn` : Partial class
 - `Learn` : Extention method
 - `Make` : Program that creates class objects, and copying class objects 
-
 - `Learn` : Structure
 - `Make` : Program that uses class and structure both together
 
