@@ -13,5 +13,5 @@
 - `.png` : Execution result capture image of `interfaceAndAbstract.exe`, same as _[Image #1]_ below
 
 ## 4. Result
-![Execution result capture image of interfaceAndAbstract.exe]()
+![Execution result capture image of interfaceAndAbstract.exe](https://github.com/pinkrabbit412/CSharpStudy/blob/main/08.%20Interface,%20Abstract/interfaceAndAbstract.png?raw=true)
 <p align="center">[Image #1] Execution result capture image of interfaceAndAbstract.exe</p>
