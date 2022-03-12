@@ -1,8 +1,37 @@
 ﻿using System;
+using System.Collections;
 
 namespace CSharpStudy {
-    public class RabbitArray {
+    public class RabbitArray : IEnumerable {
+        private int[] array;
+        public int this[int index] {
+            get { return array[index]; }
+            set {
+                Array.Resize<int>(ref array, index + 1);
+                array[index] = value;
+            }
+        }
+        // Skipping boolean MoveNext(), void Reset(), Object Current { get; }
+        public IEnumerator GetEnumerator() {
+            for (int i = 0; i < array.Length; i++)
+                yield return array[i];
+        }
+        public int Length {
+            get { return array.Length; }
+        }
         public static string PrintArrayAsOneDimensional(Array array) {
+            int temp1 = 1;
+            string result = "{ ";
+            foreach (var temp2 in array) {
+                if (temp1 == array.Length)
+                    result += (temp2 + " }");
+                else
+                    result += (temp2 + ", ");
+                temp1++;
+            }
+            return result;
+        }
+        public static string PrintArrayAsOneDimensional(RabbitArray array) {
             int temp1 = 1;
             string result = "{ ";
             foreach (var temp2 in array) {
@@ -86,6 +115,75 @@ namespace CSharpStudy {
                 { { 5, 6 }, { 7, 8 } }
             };
             Console.WriteLine("\n[?] int[] arr1 = " + RabbitArray.Print3DIntegerArray(arr7));
+
+            // #5. Jagged Array
+            int[][] arr8 = new int[][] {
+                new int[] { 1, 2, 3 },
+                new int[] { 4, 5, 6 }
+            };
+            int temp1 = 0;
+            foreach (int[] arr in arr8) {
+                Console.WriteLine("[?] int[][{0}] arr8 = {1}", temp1, RabbitArray.PrintArrayAsOneDimensional(arr));
+                temp1++;
+            }
+
+            // #6-1. ArrayList (NEED: using System.Collections;)
+            ArrayList list1 = new ArrayList();
+            list1.Add(10);
+            list1.Add(11);
+            list1.Add(12);
+            list1.RemoveAt(1); //Deletes 11
+            list1.Insert(1, 11);
+
+            // #6-2. Queue
+            Queue que1 = new Queue();
+            que1.Enqueue(10);
+            que1.Enqueue(11);   
+            que1.Enqueue(12);
+            que1.Dequeue();  // Returns 10, and delete 10
+            que1.Dequeue();  // Returns 11, and delete 11
+            que1.Dequeue();  // Returns 12, and delete 12
+
+            // #6-3. Stack
+            Stack stack1 = new Stack();
+            stack1.Push(10);
+            stack1.Push(11);
+            stack1.Push(12);
+            stack1.Pop();  // Returns 12, and delete 12
+            stack1.Pop();  // Returns 11, and delete 11
+            stack1.Pop();  // Returns 10, and delete 10
+
+            // #6-4. Hashtable (Same as Python's Dictionary type)
+            Hashtable hashtable1 = new Hashtable();
+            hashtable1["First"] = 10;
+            hashtable1["Second"] = 11;
+            hashtable1["Third"] = 12;
+            /* or,
+                Hashtable hashtable1 = new Hashtable() {
+                    ["First"] = 10,
+                    ["Second"] = 11,
+                    ["Third"] = 12,
+            };
+             */
+
+            // #7. Create Collection(ArrayList, Stack, Queue) from Array
+            int[] arr9 = { 10, 11, 12 };
+            ArrayList list2 = new ArrayList(arr9);
+            Queue que2 = new Queue(arr9);
+            Stack stack2 = new Stack(arr9);
+
+            // #8. Indexer
+            RabbitArray rarr1 = new RabbitArray();
+            rarr1[0] = 1;
+            rarr1[1] = 2;
+            rarr1[2] = 3;
+            Console.WriteLine("\n[?] RabbitArray rarr1 = " + RabbitArray.PrintArrayAsOneDimensional(rarr1));
+            Console.WriteLine("    - arr4.Length() = {0}", rarr1.Length);
+            rarr1[3] = 4;
+            Console.WriteLine("\n<Added '4' to rarr[3]...>");
+            Console.WriteLine("\n[?] RabbitArray rarr1 = " + RabbitArray.PrintArrayAsOneDimensional(rarr1));
+            Console.WriteLine("    - arr4.Length() = {0}", rarr1.Length);
+
 
             // Program exit
             Console.WriteLine("\n\n[?] Press any key to exit... ");
