@@ -16,5 +16,5 @@
 - `.png` : Execution result capture image of `CSharpArray.exe`, same as _[Image #1]_ below
 
 ## 4. Result
-![Execution result capture image of CSharpArray.exe]()
+![Execution result capture image of CSharpArray.exe](https://github.com/pinkrabbit412/CSharpStudy/blob/main/10.%20Array,%20Collection,%20Indexer/CSharpArray.png?raw=true)
 <p align="center">[Image #1] Execution result capture image of CSharpArray.exe</p>
