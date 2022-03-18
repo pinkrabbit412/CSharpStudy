@@ -29,7 +29,7 @@ This file displays each chapter's **Overview**, **Key point**, **File list**, an
 ![Execution result capture image of Generic.exe](https://github.com/pinkrabbit412/CSharpStudy/blob/main/11.%20Generic/Generic.png?raw=true)
 <p align="center">[Image #1] Execution result capture image of Generic.exe</p>
 
-<hr />
+<hr /><br />
 
 ## References...
 ```C#
