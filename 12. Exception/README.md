@@ -1,7 +1,7 @@
 ## 1. Chapter overview
 - Difficulty : `3/5 (Normal)`
 
-## 2. Chapter key point*
+## 2. Chapter key point
 - `Learn` : Exception Handling *(Especially, SEH - Structured Exception Handling)*
 - `Learn` : `try`, `catch`, `finally`
 - `Learn` : Class: `System.Exception`
