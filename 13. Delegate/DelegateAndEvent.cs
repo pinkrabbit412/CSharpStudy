@@ -33,6 +33,8 @@ namespace CSharpStudy {
         }
     }
     public delegate int IntegerDelegateExample(int a, int b);
+    public delegate int IntegerDelegateExample<T>(T a, T b);
+    public delegate void VoidDelegateExample(int a);
     public class ExampleClass {
         public static int Plus(int a, int b) { return a + b; }
         public static int Minus(int a, int b) { return a - b;  }
@@ -52,10 +54,12 @@ namespace CSharpStudy {
             else
                 return 0;
         }
+        public static int Comparer_Ascend<T>(T a, T b) where T : IComparable<T> => a.CompareTo(b);
+        public static int Comparer_Descend<T>(T a, T b) where T : IComparable<T> => -a.CompareTo(b);
         public static void BubbleSort(int[] data, IntegerDelegateExample Comparer) {
             int temp = 0;
-            for(int i = 0; i < (data.Length - 1); i++) {
-                for(int j = 0; j < data.Length - (i + 1); j++) {
+            for (int i = 0; i < (data.Length - 1); i++) {
+                for (int j = 0; j < data.Length - (i + 1); j++) {
                     if (Comparer(data[j], data[j + 1]) > 0) {
                         temp = data[j + 1];
                         data[j + 1] = data[j];
@@ -64,6 +68,23 @@ namespace CSharpStudy {
                 }
             }
         }
+        public static void BubbleSortGeneric<T>(T[] data, IntegerDelegateExample<T> Comparer) {
+            T temp;
+            for (int i = 0; i < (data.Length - 1); i++) {
+                for (int j = 0; j < data.Length - (i + 1); j++) {
+                    if (Comparer(data[j], data[j + 1]) > 0) {
+                        temp = data[j + 1];
+                        data[j + 1] = data[j];
+                        data[j] = temp;
+                    }
+                }
+            }
+        }
+    }
+    public class ExampleClass2 {
+        public static void First(int a) => Console.WriteLine($"[?] Integer input = {a}");
+        public static void Second(int a) => Console.WriteLine($"  - {a} × {a} = {a*a},");
+        public static void Third(int a) => Console.WriteLine($"  - sqrt({a}) ≒ {Math.Sqrt(a)}");
     }
     public class DelegateAndEvent {
         public static void Main(string[] args) {
@@ -74,11 +95,26 @@ namespace CSharpStudy {
 
             // #2. Passing delegate to function as parameter
             int[] array = { 1, 7, 2, 5, 3, 9, 6, 8, 0, 4};
-            Console.WriteLine("정렬 전 = " + RabbitArray.PrintArrayAsOneDimensional(array));
+            Console.WriteLine("Before Sorting = " + RabbitArray.PrintArrayAsOneDimensional(array));
             ExampleClass.BubbleSort(array, ExampleClass.Comparer_Ascend);
-            Console.WriteLine("정렬 후 (오름차순) = " + RabbitArray.PrintArrayAsOneDimensional(array));
+            Console.WriteLine("Sorted as Ascending order = " + RabbitArray.PrintArrayAsOneDimensional(array));
             ExampleClass.BubbleSort(array, ExampleClass.Comparer_Descend);
-            Console.WriteLine("정렬 후 (내림차순) = " + RabbitArray.PrintArrayAsOneDimensional(array));
+            Console.WriteLine("Sorted as Descending order = " + RabbitArray.PrintArrayAsOneDimensional(array));
+
+            // #3. Passing generic delegate to function as parameter
+            double[] array2 = { 1.1, 7.7, 2.2, 5.5, 3.3, 9.9, 6.6, 8.8, 0.0, 4.4 };
+            Console.WriteLine("\n\nBefore Sorting = " + RabbitArray.PrintArrayAsOneDimensional(array2));
+            ExampleClass.BubbleSortGeneric<double>(array2, ExampleClass.Comparer_Ascend<double>);
+            Console.WriteLine("Sorted as Ascending order = " + RabbitArray.PrintArrayAsOneDimensional(array2));
+            ExampleClass.BubbleSortGeneric<double>(array2, ExampleClass.Comparer_Descend<double>);
+            Console.WriteLine("Sorted as Descending order = " + RabbitArray.PrintArrayAsOneDimensional(array2));
+
+            // #4. Delegate Chain
+            VoidDelegateExample IntegerInformation  = new VoidDelegateExample(ExampleClass2.First)
+                                                    + new VoidDelegateExample(ExampleClass2.Second)
+                                                    + new VoidDelegateExample(ExampleClass2.Third);
+            Console.WriteLine("\n");
+            IntegerInformation(412);
 
             // Program exit
             Console.WriteLine("\n\n[?] Press any key to exit... ");
