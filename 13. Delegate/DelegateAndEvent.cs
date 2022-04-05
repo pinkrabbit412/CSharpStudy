@@ -35,6 +35,7 @@ namespace CSharpStudy {
     public delegate int IntegerDelegateExample(int a, int b);
     public delegate int IntegerDelegateExample<T>(T a, T b);
     public delegate void VoidDelegateExample(int a);
+    public delegate void EventHandler(string message);
     public class ExampleClass {
         public static int Plus(int a, int b) { return a + b; }
         public static int Minus(int a, int b) { return a - b;  }
@@ -86,7 +87,17 @@ namespace CSharpStudy {
         public static void Second(int a) => Console.WriteLine($"  - {a} × {a} = {a*a},");
         public static void Third(int a) => Console.WriteLine($"  - sqrt({a}) ≒ {Math.Sqrt(a)}");
     }
+    public class ExampleClass3 {
+        public event EventHandler Event1;
+        public void SearchForMultipleOf7(int from, int until) {
+            for (int i = from; i < until; i++) {
+                if ((i % 7) == 0)
+                    Event1(String.Format("  - [!] Multiple of seven found! (Number: {0})", i));
+            }
+        }
+    }
     public class DelegateAndEvent {
+        public static void EventHandler1(string message) => Console.WriteLine(message);
         public static void Main(string[] args) {
             // #1. Easy delegate example
             IntegerDelegateExample callback1;
@@ -115,6 +126,21 @@ namespace CSharpStudy {
                                                     + new VoidDelegateExample(ExampleClass2.Third);
             Console.WriteLine("\n");
             IntegerInformation(412);
+
+            // #5. Anonymous method
+            IntegerDelegateExample AnonymousMethodExample = delegate (int a, int b) {
+                return a + b;
+            };
+            Console.WriteLine("\n\n[?] AnonymousMethodExample(7, 9) = " + AnonymousMethodExample(7, 9));
+
+            // #6. Event
+            Console.WriteLine("\n");
+            ExampleClass3 exampleClass3 = new ExampleClass3();
+            exampleClass3.Event1 += new EventHandler(EventHandler1);
+            Console.WriteLine("[?] Range input = 1 ~ 25");
+            exampleClass3.SearchForMultipleOf7(1, 25);
+
+
 
             // Program exit
             Console.WriteLine("\n\n[?] Press any key to exit... ");
