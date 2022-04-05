@@ -15,5 +15,5 @@
 - `.png` : Execution result capture image of `DelegateAndEvent.exe`, same as _[Image #1]_ below
 
 ## 4. Result
-![Execution result capture image of DelegateAndEvent.exe]()
+![Execution result capture image of DelegateAndEvent.exe](https://github.com/pinkrabbit412/CSharpStudy/blob/main/13.%20Delegate/DelegateAndEvent.png?raw=true)
 <p align="center">[Image #1] Execution result capture image of DelegateAndEvent.exe</p>
