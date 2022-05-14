@@ -15,5 +15,5 @@
 - `.png` : Execution result capture image of `LambdaExpression.exe`, same as _[Image #1]_ below
 
 ## 4. Result
-![Execution result capture image of LambdaExpression.exe]()
+![Execution result capture image of LambdaExpression.exe](https://github.com/pinkrabbit412/CSharpStudy/blob/main/14.%20Lambda%20expression/LambdaExpression.png?raw=true)
 <p align="center">[Image #1] Execution result capture image of LambdaExpression.exe</p>
